@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Hover Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: black; /* Cambia el fondo a negro (#000) */
+            color: white; /* Cambia el color del texto a blanco (#fff) */
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 0.5s;
+        }
+        .slide1 {
+            background: #3498db;
+        }
+        .slide2 {
+            background: #e74c3c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .icon img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+        h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .qr-code img {
+            width: 100px;
+            height: 100px;
+        }
+    
+        @media (max-width: 768px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://holatelcel.com/wp-content/uploads/2022/08/hombre-estudiante-universitario.jpg" alt="Estudiante">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Nombre: Oziel Alejandres Navarro</h3>
+                <h3>Carrera: Ing. de software</h3>
+                <h3>Campus: Ixtaczoquitlan</h3>
+                <h3>Matrícula: 234567876543</h3>
+                <h3>Vigencia: Enero 2023 - Febrero 2024</h3>
+                <div class="qr-code">
+                    <img src="https://www.ocu.org/-/media/ta/images/_%20orphaned/qr-code.png?rev=2e1cc496-40d9-4e21-a7fb-9e2c76d6a288&hash=38DA21F2DF33F4BB3CE83BE5D2A723F5&mw=960" alt="Código QR">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
